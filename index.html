@@ -34,7 +34,7 @@
         }
 
         nav a {
-            margin: 0 10px;
+            margin-bottom: 10px;
             color: #b4c6e7;
             text-decoration: none;
             font-weight: bold;
@@ -158,12 +158,13 @@
                 font-size: 14px;
             }
         }
+
         .profile-container {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 25px;
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: 10px;
     flex-wrap: wrap;
 }
@@ -178,7 +179,7 @@
 }
 
 .profile-text {
-    text-align: left;
+    text-align: center; /* centrado como querías */
     color: #ffffff;
 }
 
@@ -194,18 +195,30 @@
     color: #d0d8f0;
 }
 
+/* NUEVO: tech stack (tools) */
+.tech-stack {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 10px 0 15px;
+}
+
+.tech-pill {
+    background-color: #203552;
+    border-radius: 999px;
+    padding: 4px 10px;
+    font-size: 12px;
+    color: #e1e6f0;
+    border: 1px solid #4a5b78;
+}
+
     </style>
 </head>
 
 <body>
 
 <header>
-    <nav>
-        <a href="#projects">Projects</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-    </nav>
-
     <div class="profile-container">
         <img src="profile.png" alt="Mayerlin Diaz" class="profile-pic">
         <div class="profile-text">
@@ -213,7 +226,22 @@
             <h2>Data Analyst | Python, Power BI, Tableau, SQL | Finance</h2>
         </div>
     </div>
+
+    <div class="tech-stack">
+        <span class="tech-pill">🐍 Python</span>
+        <span class="tech-pill">🧮 SQL</span>
+        <span class="tech-pill">📊 Power BI</span>
+        <span class="tech-pill">📈 Tableau</span>
+        <span class="tech-pill">💻 GitHub</span>
+    </div>
+
+    <nav>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
 </header>
+
 
     
 <main>
