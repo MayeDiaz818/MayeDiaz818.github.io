@@ -124,22 +124,39 @@
             margin-top: 0;
         }
 
-        .project-card {
+     .project-card {
     background-color: #ffffff;
     padding: 18px 20px;
     border-radius: 10px;
     margin-bottom: 20px;
     border: 1px solid #e1e6f0;
     box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
 }
 
 .project-thumb {
-    width: 100%;
-    max-height: 200px;
+    width: 170px;
+    height: 110px;
     object-fit: cover;
     border-radius: 8px;
-    margin-bottom: 12px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    flex-shrink: 0;
+    margin-bottom: 0; /* ya no está arriba del texto */
+}
+
+/* Para móvil: imagen arriba, texto abajo */
+@media (max-width: 700px) {
+    .project-card {
+        flex-direction: column;
+    }
+
+    .project-thumb {
+        width: 100%;
+        height: auto;
+        max-height: 200px;
+    }
 }
 
         .project-card h4 {
